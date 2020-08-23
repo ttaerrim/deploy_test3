@@ -8,3 +8,7 @@ from .models import Blog
 def home(request):
     blogs = Blog.objects
     return render(request, 'blogproject/home.html', {'blogs': blogs})
+
+
+def helloworld(request):
+    return render(request, 'blogproject/helloworld.html')
