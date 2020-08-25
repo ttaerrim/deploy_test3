@@ -1,0 +1,18 @@
+{% extends './base.html' %}
+{% block content %}
+
+<section>
+    <h1>Home!</h1>
+    <a href="{% url 'post' %}">POST</a>
+</section>
+
+<section class='blogs'>
+    {% for blogs in blogs %}
+    <div class='blog'>
+    <h1>{{ blogs.title }}</h1>
+    <p>{{ blogs.body }}</p>
+    <p>{{ blogs.date }}</p>
+    </div>
+    {% endfor %}
+</section>
+{% endblock content %}
